@@ -29,11 +29,11 @@ int main(int argc, char **argv) {
   for(i=-10; i<=100000; i++) {
     if(contains(kaprekarNumbers, numKaprekarNumbers, i) != isKaprekar(i)) {
       numWrong++;
-    }
-    if(contains(kaprekarNumbers, numKaprekarNumbers, i)) {
+      if(contains(kaprekarNumbers, numKaprekarNumbers, i)) {
 	fprintf(stderr, "i = %d: is a known Kaprekar number, but the method returned false\n", i);
-    } else if (!contains(kaprekarNumbers, numKaprekarNumbers, i)) {
+      } else {
 	fprintf(stderr, "i = %d: is known NOT to be a Kaprekar number, but the method returned true\n", i);
+      }
     } else {
       numCorrect++;
     }
